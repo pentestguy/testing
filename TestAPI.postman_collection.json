@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "efe8f29a-7218-4148-83ae-b3f190b651b4",
+		"name": "TestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n            \"name\":\"Developer\",\r\n            \"email\":\"abcd@8.com\",\r\n            \"password\":123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://restapi.adequateshop.com/api/authaccount/registration",
+					"protocol": "http",
+					"host": [
+						"restapi",
+						"adequateshop",
+						"com"
+					],
+					"path": [
+						"api",
+						"authaccount",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\":\"abcd@8.com\",\r\n\t\"password\":123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://restapi.adequateshop.com/api/authaccount/login",
+					"protocol": "http",
+					"host": [
+						"restapi",
+						"adequateshop",
+						"com"
+					],
+					"path": [
+						"api",
+						"authaccount",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "c07322d8-1930-4ff5-a4d0-f99a36ab873a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer d2ced592-93f1-4e7b-b19b-6275a819d178",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://restapi.adequateshop.com/api/users?page=1",
+					"protocol": "http",
+					"host": [
+						"restapi",
+						"adequateshop",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
